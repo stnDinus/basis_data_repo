@@ -1,0 +1,68 @@
+# BASIS DATA
+# A11.2022.14433
+
+# LATIHAN 1 [[
+CREATE DATABASE olshop;
+
+USE olshop;
+
+CREATE TABLE produk (
+  id_product CHAR(5) PRIMARY KEY,
+  nama VARCHAR(100),
+  merk VARCHAR(100),
+  satuan VARCHAR(50),
+  harga INT UNSIGNED NOT NULL # "UNSIGNED" menyatakan angka positif
+);
+
+SHOW COLUMNS FROM produk;
+# ]]
+
+# LATIHAN 2 [[
+# rename kolom nama > Nama_produk (menyesuaikan tabel di slide)
+ALTER TABLE produk CHANGE COLUMN nama Nama_produk VARCHAR(100);
+
+ALTER TABLE produk ADD COLUMN id_penjual int;
+
+# rename kolom harga > harga_satuan ("_" digunakan pada spasi agar valid)
+ALTER TABLE produk CHANGE COLUMN harga harga_satuan VARCHAR(100);
+
+ALTER TABLE produk DROP COLUMN merk;
+
+SHOW COLUMNS FROM produk;
+# ]]
+
+# LATIHAN 3 [[
+CREATE TABLE Car (
+  License_number VARCHAR(100),
+  Engine_serial_number CHAR(6),
+  Make VARCHAR(100),
+  Model VARCHAR(100),
+  Year CHAR(2),
+  PRIMARY KEY (License_number, Engine_serial_number)
+);
+
+INSERT INTO Car VALUES ("Texas ABC-789", "A69352", "Ford", "Mustang", "02");
+INSERT INTO Car VALUES ("Florida TVP-347", "B43696", "Oldsmobile", "Cutlass", "05");
+INSERT INTO Car VALUES ("New York MPO-22", "X83554", "Oldsmobile", "Delta", "01");
+
+SELECT * FROM Car;
+# ]]
+
+# LATIHAN 4 [[
+CREATE TABLE staf (
+  nip CHAR(4),
+  nama VARCHAR(50),
+  sex ENUM("L", "P"), # "ENUM": tipe data yang hanya dapat di-isi dengan nilai yang telah ditentukan
+  posisi VARCHAR(50),
+  tgl_masuk DATE,
+  gaji INT UNSIGNED
+);
+
+INSERT INTO staf VALUES ("A001", "Dani", "L", "Asisten", "2014-02-01", 3800000);
+INSERT INTO staf VALUES ("M001", "Slamet", "L", "Manajer", "2004-01-01", 7500000);
+INSERT INTO staf VALUES ("S001", "Siti", "P", "Supervisor", "1997-07-10", 5000000);
+
+SELECT * FROM staf;
+# ]]
+
+DROP DATABASE olshop;
