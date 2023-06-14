@@ -3,10 +3,11 @@ USE minimart;
 
 CREATE TABLE customers (
   id int PRIMARY KEY AUTO_INCREMENT,
+  email varchar(320) NOT NULL UNIQUE,
   name varchar(35) NOT NULL
 );
 
-CREATE TABLE transactions (
+CREATE TABLE sellTransactions (
   id int PRIMARY KEY AUTO_INCREMENT,
   customerId int NOT NULL,
   productId int NOT NULL,
@@ -19,6 +20,20 @@ CREATE TABLE products (
   description VARCHAR(280) DEFAULT(NULL),
   price CHAR(6) NOT NULL,
   stock INT NOT NULL DEFAULT(0)
+);
+
+CREATE TABLE buyTransactions (
+  id int PRIMARY KEY AUTO_INCREMENT,
+  supplierId int NOT NULL,
+  productId int NOT NULL,
+  productAmount int NOT NULL DEFAULT(1)
+);
+
+CREATE TABLE supplier (
+  id int PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(35),
+  address VARCHAR(280),
+  phoneNumber CHAR(10) NOT NULL
 );
 
 DROP DATABASE minimart;
