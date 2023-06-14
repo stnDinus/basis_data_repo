@@ -15,7 +15,7 @@ CREATE TABLE transactions (
 
 CREATE TABLE products (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(30) NOT NULL,
+  name VARCHAR(35) NOT NULL,
   description VARCHAR(280) DEFAULT(NULL),
   price CHAR(6) NOT NULL,
   stock INT NOT NULL DEFAULT(0)
