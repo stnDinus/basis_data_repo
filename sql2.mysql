@@ -1,0 +1,62 @@
+# SLIDE 11
+CREATE DATABASE A11202214433;
+USE A11202214433;
+SHOW DATABASES;
+
+# 12
+CREATE TABLE barang (
+  kodebrg CHAR(5),
+  namabrg CHAR(15),
+  satuan CHAR(8),
+  hargasat INTEGER(5)
+);
+SHOW TABLES;
+
+# 13
+DESC barang;
+
+# 14
+INSERT INTO barang VALUES (
+  "S0001",
+  "Sabun Cuci",
+  "Buah",
+  2500
+);
+SELECT * FROM barang;
+
+# 15
+INSERT INTO barang (
+  kodebrg,
+  namabrg,
+  satuan
+) VALUES (
+  "P0001",
+  "Piring",
+  "Buah"
+);
+SELECT * FROM barang;
+
+# 16
+ALTER TABLE barang ADD ciri CHAR(12);
+DESC barang;
+
+# 17
+SELECT * FROM barang;
+ALTER TABLE barang DROP ciri;
+
+# 18
+DESC barang;
+
+# 19
+ALTER TABLE barang CHANGE hargasat hgsat INTEGER(5);
+DESC barang;
+
+# 20
+ALTER TABLE barang CHANGE hgsat hgsat INTEGER(6);
+DESC barang;
+
+# 21
+DROP TABLE barang;
+DESC barang;
+DROP DATABASE A11202214433;
+SHOW DATABASES;
