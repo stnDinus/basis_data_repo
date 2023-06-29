@@ -13,14 +13,14 @@ CREATE TABLE sellTransactions (
   customerId int NOT NULL,
   productId int NOT NULL,
   productAmount int NOT NULL DEFAULT(1),
-  sellDate DATE
+  sellTime DATETIME
 );
 
 CREATE TABLE products (
   id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(35) NOT NULL,
   description VARCHAR(280) DEFAULT(NULL),
-  price CHAR(6) NOT NULL,
+  sellPrice CHAR(6) NOT NULL,
   stock INT NOT NULL DEFAULT(0)
 );
 
@@ -29,7 +29,8 @@ CREATE TABLE buyTransactions (
   supplierId int NOT NULL,
   productId int NOT NULL,
   productAmount int NOT NULL DEFAULT(1),
-  buyDate DATE
+  buyTime DATETIME,
+  totalBuyPrice int NOT NULL DEFAULT(0)
 );
 
 CREATE TABLE supplier (
