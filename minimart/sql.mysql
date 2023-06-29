@@ -33,11 +33,17 @@ CREATE TABLE buyTransactions (
   totalBuyPrice int NOT NULL DEFAULT(0)
 );
 
-CREATE TABLE supplier (
+CREATE TABLE suppliers (
   id int PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(35),
   address VARCHAR(280),
   phoneNumber CHAR(10) NOT NULL
 );
 
-DROP DATABASE minimart;
+source customers.sql
+source sellTransactions.sql
+source products.sql
+source buyTransactions.sql
+source suppliers.sql
+
+# DROP DATABASE minimart;
