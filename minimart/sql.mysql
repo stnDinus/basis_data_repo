@@ -11,8 +11,6 @@ CREATE TABLE customers (
 CREATE TABLE sellTransactions (
   id int PRIMARY KEY AUTO_INCREMENT,
   customerId int NOT NULL,
-  productId int NOT NULL,
-  productAmount int NOT NULL DEFAULT(1),
   sellTime DATETIME
 );
 
@@ -24,11 +22,22 @@ CREATE TABLE products (
   stock INT NOT NULL DEFAULT(0)
 );
 
+CREATE TABLE sellTransactionDetails (
+  sellTransactionId int,
+  productId int,
+  productAmount int NOT NULL DEFAULT (1),
+  PRIMARY KEY (sellTransactionId, productId),
+  FOREIGN KEY (sellTransactionId) REFERENCES sellTransactions(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  FOREIGN KEY (productId) REFERENCES products(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
 CREATE TABLE buyTransactions (
   id int PRIMARY KEY AUTO_INCREMENT,
   supplierId int NOT NULL,
-  productId int NOT NULL,
-  productAmount int NOT NULL DEFAULT(1),
   buyTime DATETIME,
   totalBuyPrice int NOT NULL DEFAULT(0)
 );
@@ -40,10 +49,18 @@ CREATE TABLE suppliers (
   phoneNumber CHAR(10) NOT NULL
 );
 
-source customers.sql
-source sellTransactions.sql
-source products.sql
-source buyTransactions.sql
-source suppliers.sql
+CREATE TABLE buyTransactionDetails (
+  buyTransactionId int,
+  productId int,
+  productAmount int NOT NULL DEFAULT (1),
+  PRIMARY KEY (buyTransactionId, productId),
+  FOREIGN KEY (buyTransactionId) REFERENCES buyTransactions(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  FOREIGN KEY (productId) REFERENCES products(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
 
 # DROP DATABASE minimart;
