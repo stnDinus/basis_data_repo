@@ -23,7 +23,9 @@ CREATE TABLE products (
   name VARCHAR(35) NOT NULL,
   description VARCHAR(280) DEFAULT(NULL),
   sellPrice CHAR(6) NOT NULL,
-  stock INT NOT NULL DEFAULT(0)
+  stock INT NOT NULL DEFAULT(0),
+  category VARCHAR(35),
+  brand VARCHAR(35)
 );
 
 CREATE TABLE sellTransactionDetails (
@@ -77,4 +79,4 @@ source suppliers.sql
 source buyTransactions.sql
 source buyTransactionDetails.sql
 
-DROP DATABASE minimart;
+# DROP DATABASE minimart;
