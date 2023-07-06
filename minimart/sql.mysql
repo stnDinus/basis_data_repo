@@ -12,7 +12,10 @@ CREATE TABLE customers (
 CREATE TABLE sellTransactions (
   id int PRIMARY KEY AUTO_INCREMENT,
   customerId int NOT NULL,
-  sellTime DATETIME
+  sellTime DATETIME,
+  FOREIGN KEY (customerId) REFERENCES customers(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE products (
@@ -36,18 +39,21 @@ CREATE TABLE sellTransactionDetails (
     ON UPDATE CASCADE
 );
 
-CREATE TABLE buyTransactions (
-  id int PRIMARY KEY AUTO_INCREMENT,
-  supplierId int NOT NULL,
-  buyTime DATETIME,
-  totalBuyPrice int NOT NULL DEFAULT(0)
-);
-
 CREATE TABLE suppliers (
   id int PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(35),
   address VARCHAR(280),
   phoneNumber CHAR(10) NOT NULL
+);
+
+CREATE TABLE buyTransactions (
+  id int PRIMARY KEY AUTO_INCREMENT,
+  supplierId int NOT NULL,
+  buyTime DATETIME,
+  totalBuyPrice int NOT NULL DEFAULT(0),
+  FOREIGN KEY (supplierId) REFERENCES suppliers(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE buyTransactionDetails (
@@ -63,5 +69,12 @@ CREATE TABLE buyTransactionDetails (
     ON UPDATE CASCADE
 );
 
+source customers.sql
+source products.sql
+source sellTransactions.sql
+source sellTransactionDetails.sql
+source suppliers.sql
+source buyTransactions.sql
+source buyTransactionDetails.sql
 
-# DROP DATABASE minimart;
+DROP DATABASE minimart;
