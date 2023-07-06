@@ -5,7 +5,8 @@ CREATE TABLE customers (
   id int PRIMARY KEY AUTO_INCREMENT,
   email varchar(320) NOT NULL UNIQUE,
   password varchar(255) NOT NULL,
-  name varchar(35) NOT NULL
+  name varchar(35) NOT NULL,
+  address VARCHAR(280)
 );
 
 CREATE TABLE sellTransactions (
