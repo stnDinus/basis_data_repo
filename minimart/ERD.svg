@@ -200,12 +200,12 @@
 				<path d="M72 474.32 A36 21.6 -180 1 0 0 474.32 A36 21.6 -180 1 0 72 474.32 Z" class="st8"/>
 				<text x="19.19" y="477.32" class="st2">sellPrice</text>			</g>
 		</g>
-		<g id="group41-110" transform="translate(533.288,-351.226)">
+		<g id="group41-110" transform="translate(533.288,-374.974)">
 			<title>Attribute.41</title>
 			<desc>stock</desc>
 			<g id="shape42-111">
 				<title>Sheet.42</title>
-				<path d="M36 474.32 L-66.12 474.32" class="st3"/>
+				<path d="M36 474.32 L-66.12 491.32" class="st3"/>
 			</g>
 			<g id="shape41-114">
 				<path d="M72 474.32 A36 21.6 -180 1 0 0 474.32 A36 21.6 -180 1 0 72 474.32 Z" class="st8"/>
@@ -222,34 +222,34 @@
 				<path d="M7.09 495.92 L7.09 300.56" class="st11"/>
 			</g>
 		</g>
-		<g id="group54-129" transform="translate(533.288,-268.107)">
+		<g id="group54-129" transform="translate(533.288,-196.862)">
 			<title>Attribute.54</title>
 			<desc>id</desc>
 			<g id="shape55-130">
 				<title>Sheet.55</title>
-				<path d="M36 474.32 L-91.88 623.38" class="st3"/>
+				<path d="M36 474.32 L-86.36 555.82" class="st3"/>
 			</g>
 			<g id="shape54-133">
 				<path d="M72 474.32 A36 21.6 -180 1 0 0 474.32 A36 21.6 -180 1 0 72 474.32 Z" class="st10"/>
 				<text x="32.23" y="477.32" class="st2"><tspan class="st4">id</tspan></text>			</g>
 		</g>
-		<g id="group56-137" transform="translate(533.288,-184.988)">
+		<g id="group56-137" transform="translate(533.288,-137.491)">
 			<title>Attribute.56</title>
 			<desc>supplierId</desc>
 			<g id="shape57-138">
 				<title>Sheet.57</title>
-				<path d="M36 474.32 L-85.01 544.84" class="st3"/>
+				<path d="M36 474.32 L-77.16 502.58" class="st3"/>
 			</g>
 			<g id="shape56-141">
 				<path d="M72 474.32 A36 21.6 -180 1 0 0 474.32 A36 21.6 -180 1 0 72 474.32 Z" class="st10"/>
 				<text x="15.75" y="477.32" class="st2">supplierId</text>			</g>
 		</g>
-		<g id="group64-144" transform="translate(533.288,-101.869)">
+		<g id="group64-144" transform="translate(533.288,-78.1206)">
 			<title>Attribute.64</title>
 			<desc>buyTime</desc>
 			<g id="shape65-145">
 				<title>Sheet.65</title>
-				<path d="M36 474.32 L-66.12 474.32" class="st3"/>
+				<path d="M36 474.32 L-74.21 455.97" class="st3"/>
 			</g>
 			<g id="shape64-148">
 				<path d="M72 474.32 A36 21.6 -180 1 0 0 474.32 A36 21.6 -180 1 0 72 474.32 Z" class="st10"/>
@@ -320,6 +320,28 @@
 			<g id="shape88-191">
 				<path d="M0 488.83 L41.01 488.83" class="st6"/>
 			</g>
+		</g>
+		<g id="group93-198" transform="translate(533.288,-315.603)">
+			<title>Attribute.93</title>
+			<desc>brand</desc>
+			<g id="shape94-199">
+				<title>Sheet.94</title>
+				<path d="M36 474.32 L-66.12 448.81" class="st3"/>
+			</g>
+			<g id="shape93-202">
+				<path d="M72 474.32 A36 21.6 -180 1 0 0 474.32 A36 21.6 -180 1 0 72 474.32 Z" class="st8"/>
+				<text x="23.98" y="477.32" class="st2">brand</text>			</g>
+		</g>
+		<g id="group95-205" transform="translate(533.288,-256.233)">
+			<title>Attribute.95</title>
+			<desc>category</desc>
+			<g id="shape96-206">
+				<title>Sheet.96</title>
+				<path d="M36 474.32 L-66.12 406.3" class="st3"/>
+			</g>
+			<g id="shape95-209">
+				<path d="M72 474.32 A36 21.6 -180 1 0 0 474.32 A36 21.6 -180 1 0 72 474.32 Z" class="st8"/>
+				<text x="18.33" y="477.32" class="st2">category</text>			</g>
 		</g>
 	</g>
 </svg>
